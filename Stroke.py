@@ -13,8 +13,8 @@ X_name = st.sidebar.multiselect('Select Predictors/X', sorted(data), default = s
 
 y = data.loc[:,Y_name]
 x = data.loc[:,X_name]
-X1 = x.select_dtypes(include = ['object']
-X2 = x.select_dtypes(exclude = ['object']
+X1 = x.select_dtypes(include = ['object'])
+X2 = x.select_dtypes(exclude = ['object'])
 
 if sorted(X1) != []:
   X1 = X1.apply(LabelEncoder().fit_transform)
